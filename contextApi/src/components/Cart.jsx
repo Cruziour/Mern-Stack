@@ -29,19 +29,24 @@ const Cart = () => {
               <h4 className="font-semibold">{item.name}</h4>
               <p className="text-gray-500">Price: ${item.price}</p>
             </div>
-            <div className='flex gap-4 items-center'>
-            <button
-              onClick={() => removeFromCart(item.id)}
-              className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
-            >
-              -
-            </button>
-            <p className="text-gray-500">{item.quantity}</p>
-            <button 
-            onClick={() => addMore(item.id)}
-            className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
-            >+</button>
-            </div>
+            {/* Quantity  Section */}
+            {!isProceedingToPayment && ( // Conditionally render quantity section
+              <div className='flex gap-4 items-center'>
+                <button
+                  onClick={() => removeFromCart(item.id)}
+                  className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+                >
+                  -
+                </button>
+                <p className="text-gray-500">{item.quantity}</p>
+                <button 
+                  onClick={() => addMore(item.id)}
+                  className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+                >
+                  +
+                </button>
+              </div>
+            )}
           </div>
         ))
       )}

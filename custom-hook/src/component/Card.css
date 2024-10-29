@@ -1,0 +1,22 @@
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .photo-item {
+    width: 150px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
